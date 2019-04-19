@@ -239,6 +239,7 @@ return array(
     'a3fccc207d3ef7a9846f7593842ab949' => $vendorDir . '/magento/module-wishlist-analytics/registration.php',
     'd04d5084d3db908d3544ed506541866a' => $vendorDir . '/magento/theme-adminhtml-backend/registration.php',
     '7102f9cf0d2c08bc731a7e185c1c8bfc' => $vendorDir . '/magento/theme-frontend-luma/registration.php',
+    'e3f538c6e0573d50c9717f8f9588789e' => $vendorDir . '/msp/common/registration.php',
     'c0b4e657bfc52b8949a8980203e7ae6e' => $vendorDir . '/msp/recaptcha/registration.php',
     'aa99edf9b0e88f2dccf8ffaddff1ce2b' => $vendorDir . '/msp/twofactorauth/registration.php',
     '3109cb1a231dcd04bee1f9f620d46975' => $vendorDir . '/paragonie/sodium_compat/autoload.php',
@@ -258,5 +259,6 @@ return array(
     'f1c1523a4c5d520b50bffc4a75ea5a5c' => $vendorDir . '/magento/module-tax-sample-data/registration.php',
     'f3d4617c4b29f1082289d89745685dad' => $vendorDir . '/magento/module-widget-sample-data/registration.php',
     '759d958743dba8d926c9111b82afe3e9' => $vendorDir . '/magento/module-wishlist-sample-data/registration.php',
+    '8d903a75c7fe365e6b0070023a9092ea' => $vendorDir . '/msp/devtools/registration.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );

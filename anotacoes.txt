@@ -1,0 +1,1 @@
+bin/magento module:enable --clear-static-content [Component_Name ou --all pra todos]

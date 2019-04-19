@@ -307,6 +307,8 @@ return array(
     'Magento\\' => array($baseDir . '/app/code/Magento'),
     'MSP\\TwoFactorAuth\\' => array($vendorDir . '/msp/twofactorauth'),
     'MSP\\ReCaptcha\\' => array($vendorDir . '/msp/recaptcha'),
+    'MSP\\DevTools\\' => array($vendorDir . '/msp/devtools'),
+    'MSP\\Common\\' => array($vendorDir . '/msp/common'),
     'MFTF\\' => array($vendorDir . '/magento/magento2-functional-testing-framework/dev/tests/functional/MFTF'),
     'League\\Container\\' => array($vendorDir . '/league/container/src'),
     'Klarna\\Ordermanagement\\' => array($vendorDir . '/klarna/module-ordermanagement'),

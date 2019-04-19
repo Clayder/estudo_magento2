@@ -240,6 +240,7 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
         'a3fccc207d3ef7a9846f7593842ab949' => __DIR__ . '/..' . '/magento/module-wishlist-analytics/registration.php',
         'd04d5084d3db908d3544ed506541866a' => __DIR__ . '/..' . '/magento/theme-adminhtml-backend/registration.php',
         '7102f9cf0d2c08bc731a7e185c1c8bfc' => __DIR__ . '/..' . '/magento/theme-frontend-luma/registration.php',
+        'e3f538c6e0573d50c9717f8f9588789e' => __DIR__ . '/..' . '/msp/common/registration.php',
         'c0b4e657bfc52b8949a8980203e7ae6e' => __DIR__ . '/..' . '/msp/recaptcha/registration.php',
         'aa99edf9b0e88f2dccf8ffaddff1ce2b' => __DIR__ . '/..' . '/msp/twofactorauth/registration.php',
         '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
@@ -259,6 +260,7 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
         'f1c1523a4c5d520b50bffc4a75ea5a5c' => __DIR__ . '/..' . '/magento/module-tax-sample-data/registration.php',
         'f3d4617c4b29f1082289d89745685dad' => __DIR__ . '/..' . '/magento/module-widget-sample-data/registration.php',
         '759d958743dba8d926c9111b82afe3e9' => __DIR__ . '/..' . '/magento/module-wishlist-sample-data/registration.php',
+        '8d903a75c7fe365e6b0070023a9092ea' => __DIR__ . '/..' . '/msp/devtools/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -596,6 +598,8 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
             'Magento\\' => 8,
             'MSP\\TwoFactorAuth\\' => 18,
             'MSP\\ReCaptcha\\' => 14,
+            'MSP\\DevTools\\' => 13,
+            'MSP\\Common\\' => 11,
             'MFTF\\' => 5,
         ),
         'L' => 
@@ -1882,6 +1886,14 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
         'MSP\\ReCaptcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/msp/recaptcha',
+        ),
+        'MSP\\DevTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/msp/devtools',
+        ),
+        'MSP\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/msp/common',
         ),
         'MFTF\\' => 
         array (
