@@ -245,6 +245,7 @@ return array(
     '3109cb1a231dcd04bee1f9f620d46975' => $vendorDir . '/paragonie/sodium_compat/autoload.php',
     'aa75ea0761a2f40c1f3b32ad314f86c4' => $vendorDir . '/phpseclib/mcrypt_compat/lib/mcrypt.php',
     '153a7817726e1caca4e6c3b7bc76f329' => $vendorDir . '/temando/module-shipping-m2/registration.php',
+    '2f525c815f64c460bef07e978b0e15f0' => $vendorDir . '/developersrede/magento2/registration.php',
     'efb1c0737b9e14915954f7954ea42462' => $vendorDir . '/magento/module-bundle-sample-data/registration.php',
     '583682c13632dbb2680535a04562c4c2' => $vendorDir . '/magento/module-cms-sample-data/registration.php',
     '0c100786d3c616fb17157083a219dbb9' => $vendorDir . '/magento/module-customer-sample-data/registration.php',

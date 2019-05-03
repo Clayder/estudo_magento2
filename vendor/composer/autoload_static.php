@@ -246,6 +246,7 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
         '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'aa75ea0761a2f40c1f3b32ad314f86c4' => __DIR__ . '/..' . '/phpseclib/mcrypt_compat/lib/mcrypt.php',
         '153a7817726e1caca4e6c3b7bc76f329' => __DIR__ . '/..' . '/temando/module-shipping-m2/registration.php',
+        '2f525c815f64c460bef07e978b0e15f0' => __DIR__ . '/..' . '/developersrede/magento2/registration.php',
         'efb1c0737b9e14915954f7954ea42462' => __DIR__ . '/..' . '/magento/module-bundle-sample-data/registration.php',
         '583682c13632dbb2680535a04562c4c2' => __DIR__ . '/..' . '/magento/module-cms-sample-data/registration.php',
         '0c100786d3c616fb17157083a219dbb9' => __DIR__ . '/..' . '/magento/module-customer-sample-data/registration.php',
@@ -360,6 +361,8 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
         'R' => 
         array (
             'Robo\\' => 5,
+            'Rede\\Adquirencia\\' => 17,
+            'Rede\\' => 5,
             'React\\Promise\\' => 14,
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
@@ -969,6 +972,14 @@ class ComposerStaticInite08960cc7584ba3974d46cfae83bba03
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
+        ),
+        'Rede\\Adquirencia\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/developersrede/magento2',
+        ),
+        'Rede\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/developersrede/erede-php/src/Rede',
         ),
         'React\\Promise\\' => 
         array (

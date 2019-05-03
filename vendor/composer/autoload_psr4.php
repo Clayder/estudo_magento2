@@ -78,6 +78,8 @@ return array(
     'Seld\\PharUtils\\' => array($vendorDir . '/seld/phar-utils/src'),
     'Seld\\JsonLint\\' => array($vendorDir . '/seld/jsonlint/src/Seld/JsonLint'),
     'Robo\\' => array($vendorDir . '/consolidation/robo/src'),
+    'Rede\\Adquirencia\\' => array($vendorDir . '/developersrede/magento2'),
+    'Rede\\' => array($vendorDir . '/developersrede/erede-php/src/Rede'),
     'React\\Promise\\' => array($vendorDir . '/react/promise/src'),
     'ReCaptcha\\' => array($vendorDir . '/google/recaptcha/src/ReCaptcha'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
