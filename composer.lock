@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa9fd5c961a35c09091c3c0d9df3ec6d",
+    "content-hash": "9e00f3b35e757ff4c14c2585f4005c41",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -876,6 +876,86 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "developersrede/erede-php",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DevelopersRede/erede-php.git",
+                "reference": "a442a9b5c27c82084428e55b003312af52d80020"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DevelopersRede/erede-php/zipball/a442a9b5c27c82084428e55b003312af52d80020",
+                "reference": "a442a9b5c27c82084428e55b003312af52d80020",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.6",
+                "psr/log": ">=1.0"
+            },
+            "suggest": {
+                "monolog/monolog": "Allows more advanced logging of the application flow"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rede\\": "src//Rede"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Batista Neto",
+                    "email": "neto.joaobatista@gmail.com"
+                }
+            ],
+            "description": "e.Rede integration SDK",
+            "time": "2018-10-23T15:18:20+00:00"
+        },
+        {
+            "name": "developersrede/magento2",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DevelopersRede/magento2.git",
+                "reference": "d46eced258a8a4b4365c1e22b4805f8741f21a3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DevelopersRede/magento2/zipball/d46eced258a8a4b4365c1e22b4805f8741f21a3f",
+                "reference": "d46eced258a8a4b4365c1e22b4805f8741f21a3f",
+                "shasum": ""
+            },
+            "require": {
+                "developersrede/erede-php": "^3.0",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "<7.3"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rede\\Adquirencia\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0",
+                "MIT"
+            ],
+            "description": "Módulo de pagamento Rede para Magento 2",
+            "time": "2018-12-13T19:59:52+00:00"
         },
         {
             "name": "donatj/phpuseragentparser",
@@ -17372,6 +17452,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2018-08-09T05:50:03+00:00"
         },
         {

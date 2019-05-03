@@ -1588,6 +1588,90 @@
         "homepage": "https://github.com/container-interop/container-interop"
     },
     {
+        "name": "developersrede/erede-php",
+        "version": "3.0.2",
+        "version_normalized": "3.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/DevelopersRede/erede-php.git",
+            "reference": "a442a9b5c27c82084428e55b003312af52d80020"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/DevelopersRede/erede-php/zipball/a442a9b5c27c82084428e55b003312af52d80020",
+            "reference": "a442a9b5c27c82084428e55b003312af52d80020",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.6",
+            "psr/log": ">=1.0"
+        },
+        "suggest": {
+            "monolog/monolog": "Allows more advanced logging of the application flow"
+        },
+        "time": "2018-10-23T15:18:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Rede\\": "src//Rede"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "João Batista Neto",
+                "email": "neto.joaobatista@gmail.com"
+            }
+        ],
+        "description": "e.Rede integration SDK"
+    },
+    {
+        "name": "developersrede/magento2",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/DevelopersRede/magento2.git",
+            "reference": "d46eced258a8a4b4365c1e22b4805f8741f21a3f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/DevelopersRede/magento2/zipball/d46eced258a8a4b4365c1e22b4805f8741f21a3f",
+            "reference": "d46eced258a8a4b4365c1e22b4805f8741f21a3f",
+            "shasum": ""
+        },
+        "require": {
+            "developersrede/erede-php": "^3.0",
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": "<7.3"
+        },
+        "time": "2018-12-13T19:59:52+00:00",
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "Rede\\Adquirencia\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "OSL-3.0",
+            "AFL-3.0",
+            "MIT"
+        ],
+        "description": "Módulo de pagamento Rede para Magento 2"
+    },
+    {
         "name": "dflydev/dot-access-data",
         "version": "v1.1.0",
         "version_normalized": "1.1.0.0",
