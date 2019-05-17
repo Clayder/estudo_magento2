@@ -1,15 +1,35 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: clayder
- * Date: 04/05/19
- * Time: 17:45
- */
 
 namespace Clayder\Office\Setup;
 
 
-class Employeesetup
-{
+use Magento\Eav\Setup\EavSetup;
 
+class EmployeeSetup extends EavSetup
+{
+    public function getDefaultEntities()
+    {
+        $employeeEntity = \Clayder\Office\Model\Employee::ENTITY;
+        $entities = [
+            $employeeEntity => [
+                'entity_model' => 'Clayder\Office\Model\ResourceModel\Employee',
+                'table' => $employeeEntity.'_entity',
+                'attributes' => [
+                    'department_id' => [
+                        'type' => 'static'
+                    ],
+                    'email' => [
+                        'type' => 'static'
+                    ],
+                    'first_name' => [
+                        'type' => 'static'
+                    ],
+                    'last_name' => [
+                        'type' => 'static'
+                    ]
+                ]
+            ],
+        ];
+        return $entities;
+    }
 }
