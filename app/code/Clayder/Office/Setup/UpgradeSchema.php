@@ -30,6 +30,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
                     $departmentEntityTable,
                     'entity_id'
                 ),
+                $setup->getTable($employeeEntityTable),
                 'department_id',
                 $setup->getTable($departmentEntityTable),
                 'entity_id',

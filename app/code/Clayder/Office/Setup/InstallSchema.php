@@ -66,10 +66,8 @@ class InstallSchema implements InstallSchemaInterface
                 \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                 null,
                 [
-                    'identity' => true,
                     'unsigned' => true,
-                    'nullable' => false,
-                    'primary' =>true
+                    'nullable' => false
                 ],
                 "Department Id"
             )
@@ -229,6 +227,545 @@ class InstallSchema implements InstallSchemaInterface
                 \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
             )
             ->setComment("Employee Decimall Attribute Backend Table");
+        $setup->getConnection()->createTable($table);
+
+        $table = $setup->getConnection()
+            ->newTable($setup->getTable($employeeEntity.'_entity_datetime'))
+            ->addColumn(
+                'value_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'identity' => true,
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'primary' =>true
+                ],
+                "Value ID"
+            )
+            ->addColumn(
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Attribute ID"
+            )
+            ->addColumn(
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Store ID"
+            )
+            ->addColumn(
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Entity ID"
+            )
+            ->addColumn(
+                'value',
+                \Magento\Framework\DB\Ddl\Table::TYPE_DATETIME,
+                null,
+                [],
+                "Value"
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.'_entity_datetime',
+                    [
+                        'entity_id',
+                        'attribute_id',
+                        'store_id'
+                    ],
+                    \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ),
+                [
+                    'entity_id',
+                    'attribute_id',
+                    'store_id'
+                ],
+                [
+                    'type' => \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.'_entity_datetime',
+                    [
+                        'store_id'
+                    ]
+                ),
+                [
+                    'store_id'
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.'_entity_datetime',
+                    [
+                        'attribute_id'
+                    ]
+                ),
+                [
+                    'attribute_id'
+                ]
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.'_entity_datetime',
+                    'attribute_id',
+                    'eav_attribute',
+                    'attribute_id'
+                ),
+                'attribute_id',
+                $setup->getTable('eav_attribute'),
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.'_entity_datetime',
+                    'entity_id',
+                    $employeeEntity.'_entity',
+                    'entity_id'
+                ),
+                'entity_id',
+                $setup->getTable($employeeEntity.'_entity'),
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.'_entity_datetime',
+                    'store_id',
+                    'store',
+                    'store_id'
+                ),
+                'store_id',
+                $setup->getTable('store'),
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->setComment("Employee datetime Attribute Backend Table");
+        $setup->getConnection()->createTable($table);
+
+        $typeTable =  '_entity_varchar';
+        $table = $setup->getConnection()
+            ->newTable($setup->getTable($employeeEntity.$typeTable))
+            ->addColumn(
+                'value_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'identity' => true,
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'primary' =>true
+                ],
+                "Value ID"
+            )
+            ->addColumn(
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Attribute ID"
+            )
+            ->addColumn(
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Store ID"
+            )
+            ->addColumn(
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Entity ID"
+            )
+            ->addColumn(
+                'value',
+                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                null,
+                [],
+                "Value"
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'entity_id',
+                        'attribute_id',
+                        'store_id'
+                    ],
+                    \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ),
+                [
+                    'entity_id',
+                    'attribute_id',
+                    'store_id'
+                ],
+                [
+                    'type' => \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'store_id'
+                    ]
+                ),
+                [
+                    'store_id'
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'attribute_id'
+                    ]
+                ),
+                [
+                    'attribute_id'
+                ]
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'attribute_id',
+                    'eav_attribute',
+                    'attribute_id'
+                ),
+                'attribute_id',
+                $setup->getTable('eav_attribute'),
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'entity_id',
+                    $employeeEntity.'_entity',
+                    'entity_id'
+                ),
+                'entity_id',
+                $setup->getTable($employeeEntity.'_entity'),
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'store_id',
+                    'store',
+                    'store_id'
+                ),
+                'store_id',
+                $setup->getTable('store'),
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->setComment("Employee varchar Attribute Backend Table");
+        $setup->getConnection()->createTable($table);
+
+        $typeTable =  '_entity_int';
+        $table = $setup->getConnection()
+            ->newTable($setup->getTable($employeeEntity.$typeTable))
+            ->addColumn(
+                'value_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'identity' => true,
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'primary' =>true
+                ],
+                "Value ID"
+            )
+            ->addColumn(
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Attribute ID"
+            )
+            ->addColumn(
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Store ID"
+            )
+            ->addColumn(
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Entity ID"
+            )
+            ->addColumn(
+                'value',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [],
+                "Value"
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'entity_id',
+                        'attribute_id',
+                        'store_id'
+                    ],
+                    \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ),
+                [
+                    'entity_id',
+                    'attribute_id',
+                    'store_id'
+                ],
+                [
+                    'type' => \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'store_id'
+                    ]
+                ),
+                [
+                    'store_id'
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'attribute_id'
+                    ]
+                ),
+                [
+                    'attribute_id'
+                ]
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'attribute_id',
+                    'eav_attribute',
+                    'attribute_id'
+                ),
+                'attribute_id',
+                $setup->getTable('eav_attribute'),
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'entity_id',
+                    $employeeEntity.'_entity',
+                    'entity_id'
+                ),
+                'entity_id',
+                $setup->getTable($employeeEntity.'_entity'),
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'store_id',
+                    'store',
+                    'store_id'
+                ),
+                'store_id',
+                $setup->getTable('store'),
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->setComment("Employee int Attribute Backend Table");
+        $setup->getConnection()->createTable($table);
+
+        $typeTable =  '_entity_text';
+        $table = $setup->getConnection()
+            ->newTable($setup->getTable($employeeEntity.$typeTable))
+            ->addColumn(
+                'value_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'identity' => true,
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'primary' =>true
+                ],
+                "Value ID"
+            )
+            ->addColumn(
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Attribute ID"
+            )
+            ->addColumn(
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Store ID"
+            )
+            ->addColumn(
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                null,
+                [
+                    'unsigned' => true,
+                    'nullable' => false,
+                    'default' => '0'
+                ],
+                "Entity ID"
+            )
+            ->addColumn(
+                'value',
+                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                null,
+                [],
+                "Value"
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'entity_id',
+                        'attribute_id',
+                        'store_id'
+                    ],
+                    \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ),
+                [
+                    'entity_id',
+                    'attribute_id',
+                    'store_id'
+                ],
+                [
+                    'type' => \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_UNIQUE
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'store_id'
+                    ]
+                ),
+                [
+                    'store_id'
+                ]
+            )
+            ->addIndex(
+                $setup->getIdxName(
+                    $employeeEntity.$typeTable,
+                    [
+                        'attribute_id'
+                    ]
+                ),
+                [
+                    'attribute_id'
+                ]
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'attribute_id',
+                    'eav_attribute',
+                    'attribute_id'
+                ),
+                'attribute_id',
+                $setup->getTable('eav_attribute'),
+                'attribute_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'entity_id',
+                    $employeeEntity.'_entity',
+                    'entity_id'
+                ),
+                'entity_id',
+                $setup->getTable($employeeEntity.'_entity'),
+                'entity_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->addForeignKey(
+                $setup->getFkName(
+                    $employeeEntity.$typeTable,
+                    'store_id',
+                    'store',
+                    'store_id'
+                ),
+                'store_id',
+                $setup->getTable('store'),
+                'store_id',
+                \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+            )
+            ->setComment("Employee text Attribute Backend Table");
         $setup->getConnection()->createTable($table);
 
         $setup->endSetup();

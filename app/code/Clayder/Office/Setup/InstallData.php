@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: clayder
- * Date: 02/05/19
- * Time: 23:05
- */
 
 namespace Clayder\Office\Setup;
 
@@ -18,7 +12,7 @@ class InstallData implements InstallDataInterface
     private $employeeSetupFactory;
 
     public function __construct(
-        \Clayder\Office\Setup\EmplyeeSetupFactory $employeeSetupFactory
+        \Clayder\Office\Setup\EmployeeSetupFactory $employeeSetupFactory
     )
     {
         $this->employeeSetupFactory = $employeeSetupFactory;
