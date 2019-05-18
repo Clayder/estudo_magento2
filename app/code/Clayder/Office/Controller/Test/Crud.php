@@ -61,5 +61,8 @@ class Crud extends \Clayder\Office\Controller\Test
         $employee1->setVatNumber('GB123451234');
         $employee1->setNote('Note #1');
         // $employee1->save();
+
+        $department->load(1);
+        var_dump($department->toArray());
     }
 }
