@@ -1,0 +1,22 @@
+{
+    "name": "clayder/module-plugged",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Clayder",
+            "email": "peterclayder@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Clayder\\Plugged\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
