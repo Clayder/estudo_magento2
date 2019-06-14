@@ -1,40 +1,40 @@
-# Modelo de solicitação de extração
+# Pull Request Template
 
-## Descrição
+## Description
 
-Por favor, inclua um resumo da alteração e qual problema foi corrigido. Por favor inclua também motivação relevante e contexto. Liste todas as dependências necessárias para essa mudança.
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-Correções # (problema)
+Fixes # (issue)
 
-## Tipo de mudança
+## Type of change
 
-Por favor, apague as opções que não sejam relevantes.
+Please delete options that are not relevant.
 
-- [] Correção de bug (alteração sem quebra que corrige um problema)
-- [] Novo recurso (mudança sem quebra que adiciona funcionalidade)
-- [] Quebrando a mudança (correção ou recurso que faria com que a funcionalidade existente não funcionasse como esperado)
-- [] Esta alteração requer uma atualização de documentação
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
 
-## Como isso foi testado?
+## How Has This Been Tested?
 
-Descreva os testes que você executou para verificar suas alterações. Forneça instruções para que possamos reproduzir. Por favor, liste todos os detalhes relevantes para a sua configuração de teste
+Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
 
-- [] teste A
-- [] Teste B
+- [ ] Test A
+- [ ] Test B
 
-** Configuração de teste **:
-* Versão do firmware:
+**Test Configuration**:
+* Firmware version:
 * Hardware:
 * Toolchain:
 * SDK:
 
-## Lista de controle:
+## Checklist:
 
-- [] Meu código segue as diretrizes de estilo deste projeto
-- [] Eu realizei uma auto-revisão do meu próprio código
-- [] Comentei meu código, principalmente em áreas difíceis de entender
-- [] fiz alterações correspondentes na documentação
-- [] Minhas alterações não geram novos avisos
-- [] Eu adicionei testes que provam que minha correção é eficaz ou que meu recurso funciona
-- [] Testes de unidade novos e existentes passam localmente com minhas alterações
-- [] Quaisquer alterações dependentes foram mescladas e publicadas em módulos downstream
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+- [ ] Any dependent changes have been merged and published in downstream modules
